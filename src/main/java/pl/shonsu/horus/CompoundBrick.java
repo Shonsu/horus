@@ -16,9 +16,6 @@ class CompoundBrick implements CompositeBlock{
         this.blocks.addAll(blocks);
     }
 
-    public void add(Block block){
-        blocks.add(block);
-    }
     @Override
     public List<Block> getBlocks() {
         return blocks;

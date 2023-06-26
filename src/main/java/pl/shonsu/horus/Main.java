@@ -25,13 +25,13 @@ class Main {
         CompoundBrick brick = new CompoundBrick(blocks2);
 
         Wall wall = new Wall(brick);
-
         List<Block> blocks = wall.findBlocksByMaterial("wood");
-        blocks.stream().forEach(block -> System.out.println(block.getMaterial() + " " + block.getMaterial()));
+
+        blocks.stream().forEach(block -> System.out.println(block.getMaterial() + " " + block.getColor()));
 
         System.out.println(wall.count());
 
-        Optional<Block> block = wall.findBlockByColor("Red123");
+        Optional<Block> block = wall.findBlockByColor("Red");
         block.ifPresent(block1 -> System.out.println(block1.getColor()));
 
     }
